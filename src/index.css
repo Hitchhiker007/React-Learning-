@@ -49,6 +49,11 @@ header p {
   font-size: 1.25rem;
   color: #8964b0;
   font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+}
+
+p {
+  text-align: center;
 }
 
 main {

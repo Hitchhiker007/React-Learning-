@@ -1,3 +1,6 @@
+import reactImg from './assets/react-core-concepts.png';
+import componentsImg from './assets/components.png';
+
 const reactDescriptions = ['Bussy', 'Nussy', 'Gushy', 'The Bussy Prince', 'Sarlussy', 'Barlussy', 'Gnarlussy'];
 
 function generateRandomInt(max) {
@@ -8,7 +11,7 @@ function Header() {
   const description = reactDescriptions[generateRandomInt(reactDescriptions.length - 1)];
   return (
     <header>
-        <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+        <img src= {reactImg} alt="Stylized atom" />
         <h1>React Essentials</h1>
         <p>
           You are in {description} Domain!
@@ -25,13 +28,32 @@ export function MainGoal(){
   );
 }
 
+function CoreConcept(props){
+  return (
+    <li>
+      <img src = {props.image} alt= {props.title} />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+  )
+}
+
 function App() {
   return (
     <div>
       <Header />
       <h1>BUSSY!</h1>
       <main>
-        <h2>Bussy!</h2>
+        <section id= "core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <CoreConcept title = "Components" description = "The core ui building block"
+            image={componentsImg} />
+            <CoreConcept />
+            <CoreConcept />
+            <CoreConcept />
+          </ul>
+        </section>
         <MainGoal />
       </main>
     </div>
