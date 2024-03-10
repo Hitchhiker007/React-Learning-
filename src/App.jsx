@@ -1,5 +1,8 @@
 import reactImg from './assets/react-core-concepts.png';
 import componentsImg from './assets/components.png';
+import stateImg from './assets/state-mgmt.png';
+import jsxuiImg from './assets/jsx-ui.png';
+import configImg from './assets/config.png';
 
 const reactDescriptions = ['Bussy', 'Nussy', 'Gushy', 'The Bussy Prince', 'Sarlussy', 'Barlussy', 'Gnarlussy'];
 
@@ -49,9 +52,9 @@ function App() {
           <ul>
             <CoreConcept title = "Components" description = "The core ui building block"
             image={componentsImg} />
-            <CoreConcept />
-            <CoreConcept />
-            <CoreConcept />
+            <CoreConcept title = "State" description = "State MGMT" image={stateImg} />
+            <CoreConcept title = "JSX UI" description = "Jsx ui" image={jsxuiImg} />
+            <CoreConcept title = "Config" description = "Config" image={configImg}/>
           </ul>
         </section>
         <MainGoal />
