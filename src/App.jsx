@@ -1,24 +1,6 @@
-import reactImg from './assets/react-core-concepts.png';
 import { CORE_CONCEPTS } from './data.js';
-
-const reactDescriptions = ['Bussy', 'Nussy', 'Gushy', 'The Bussy Prince', 'Sarlussy', 'Barlussy', 'Gnarlussy'];
-
-function generateRandomInt(max) {
-  return Math.floor(Math.random() * (max +1));
-}
-
-function Header() {
-  const description = reactDescriptions[generateRandomInt(reactDescriptions.length - 1)];
-  return (
-    <header>
-        <img src= {reactImg} alt="Stylized atom" />
-        <h1>React Essentials</h1>
-        <p>
-          You are in {description} Domain!
-        </p>
-      </header>
-    );
-  }
+import Header from './components/Header.jsx';
+import CoreConcept from './components/CoreConcept.jsx';
 
 export function MainGoal(){
   return (
@@ -26,16 +8,6 @@ export function MainGoal(){
     My main goal: Learn react from the ground up"
     </p>
   );
-}
-
-function CoreConcept({image, title, description}){
-  return (
-    <li>
-      <img src = {image} alt= {title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </li>
-  )
 }
 
 function App() {
