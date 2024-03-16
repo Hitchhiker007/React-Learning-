@@ -9,7 +9,7 @@
     padding: 2rem;
     max-width: 30rem;
     border-radius: 6px;
-    background: linear-gradient(#254041, #203031);
+    background: linear-gradient(#3e2541, #a12099);
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
   }
   
@@ -26,6 +26,6 @@
   }
   
   .card a {
-    color: #b3f4f6;
+    color: #37c3db;
     text-decoration: none;
   }
