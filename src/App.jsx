@@ -13,8 +13,8 @@ export function MainGoal(){
 }
 
 function App() {
-  function handleClick() {
-    console.log("Hello World");
+  function handleClick(selectedButton) {
+    console.log(selectedButton);
   }
   
   return (
@@ -35,9 +35,9 @@ function App() {
         <section id = "examples">
           <menu>
             <TabButton onSelect={()=> handleClick('Components')}>Components</TabButton>
-            <TabButton onSelect={()=> handleClick('Components')}>JSX</TabButton>
-            <TabButton onSelect={()=> handleClick('Components')}>Props</TabButton>
-            <TabButton onSelect={()=> handleClick('Components')}>State</TabButton>
+            <TabButton onSelect={()=> handleClick('Jsx')}>JSX</TabButton>
+            <TabButton onSelect={()=> handleClick('Props')}>Props</TabButton>
+            <TabButton onSelect={()=> handleClick('State')}>State</TabButton>
           </menu>
         </section>
         <MainGoal />
