@@ -34,10 +34,10 @@ function App() {
         </section>
         <section id = "examples">
           <menu>
-            <TabButton onSelect={handleClick}>Components</TabButton>
-            <TabButton onSelect={handleClick}>JSX</TabButton>
-            <TabButton onSelect={handleClick}>Props</TabButton>
-            <TabButton onSelect={handleClick}>State</TabButton>
+            <TabButton onSelect={()=> handleClick('Components')}>Components</TabButton>
+            <TabButton onSelect={()=> handleClick('Components')}>JSX</TabButton>
+            <TabButton onSelect={()=> handleClick('Components')}>Props</TabButton>
+            <TabButton onSelect={()=> handleClick('Components')}>State</TabButton>
           </menu>
         </section>
         <MainGoal />
