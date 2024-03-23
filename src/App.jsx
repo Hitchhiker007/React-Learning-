@@ -1,8 +1,13 @@
+import {useState} from 'react';
+
 import { CORE_CONCEPTS } from './data.js';
 import Header from './components/Header/Header.jsx';
 import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 import Card from './components/Card/Card.jsx';
+
+import React from 'react';
+import MusicPlayer from './components/MusicPlayer';
 
 export function MainGoal(){
   return (
@@ -33,6 +38,7 @@ function App() {
           </ul>
         </section>
         <section id = "examples">
+        <MusicPlayer/>
           <menu>
             <TabButton onSelect={()=> handleClick('Components')}>Components</TabButton>
             <TabButton onSelect={()=> handleClick('Jsx')}>JSX</TabButton>
