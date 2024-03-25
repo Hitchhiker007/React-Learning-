@@ -4,7 +4,6 @@ import './MusicPlayer.css'; // Import CSS file
 
 class MusicPlayer extends React.Component {
   componentWillUnmount() {
-    // Clean up if needed
   }
 
   render() {

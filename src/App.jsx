@@ -8,6 +8,7 @@ import Card from './components/Card/Card.jsx';
 
 import React from 'react';
 import MusicPlayer from './components/MusicPlayer';
+import DateTimeDisplay from './components/DateTimeDisplay.jsx';
 
 export function MainGoal(){
   return (
@@ -18,6 +19,10 @@ export function MainGoal(){
 }
 
 function App() {
+
+  const dateTime = DateTimeDisplay();
+
+
   function handleClick(selectedButton) {
     console.log(selectedButton);
   }
@@ -39,6 +44,8 @@ function App() {
         </section>
         <section id = "examples">
         <MusicPlayer/>
+        <h2>Current Date and Time:</h2>
+        <p>{dateTime.toLocaleString()}</p>
           <menu>
             <TabButton onSelect={()=> handleClick('Components')}>Components</TabButton>
             <TabButton onSelect={()=> handleClick('Jsx')}>JSX</TabButton>
