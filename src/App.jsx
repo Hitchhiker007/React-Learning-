@@ -10,6 +10,9 @@ import React from 'react';
 import MusicPlayer from './components/MusicPlayer';
 import DateTimeDisplay from './components/DateTimeDisplay.jsx';
 
+import theme1 from './components/theme.mp3';
+import theme2 from './components/theme2.mp3';
+
 export function MainGoal(){
   return (
     <p>
@@ -21,7 +24,7 @@ export function MainGoal(){
 function App() {
 
   const dateTime = DateTimeDisplay();
-
+  const themes = [theme1, theme2]; 
 
   function handleClick(selectedButton) {
     console.log(selectedButton);
@@ -43,7 +46,7 @@ function App() {
           </ul>
         </section>
         <section id = "examples">
-        <MusicPlayer/>
+        <MusicPlayer audioFiles={themes} />
         <h2>Current Date and Time:</h2>
         <p>{dateTime.toLocaleString()}</p>
           <menu>
